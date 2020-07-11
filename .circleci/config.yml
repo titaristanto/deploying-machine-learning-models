@@ -202,12 +202,12 @@ workflows:
                only:
                  - 103heroku
       - section_11_build_and_push_to_heroku_docker:
-          requires:
-            - train_and_upload_regression_model
-          filters:
-            branches:
-              only:
-                - 115
+           requires:
+             - train_and_upload_regression_model
+           filters:
+             branches:
+               only:
+                 - 115
       # - section_12_publish_docker_image_to_aws:
       #     requires:
       #       - train_and_upload_regression_model
@@ -215,11 +215,11 @@ workflows:
       #       branches:
       #         only:
       #           - master
-      - section_13_train_and_upload_neural_network_model:
-          requires:
-            - test_regression_model
-            - test_ml_api
-            - section_9_differential_tests
+      #- section_13_train_and_upload_neural_network_model:
+      #    requires:
+      #      - test_regression_model
+      #      - test_ml_api
+      #      - section_9_differential_tests
             # - train_and_upload_regression_model
           # filters:
           #   branches:
